@@ -1,58 +1,84 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+Iniciar Servidores
+<br>
+┌──(㉿)-[~]
+└─$ service apache2 start 
+<br>
+┌──(㉿)-[~]
+└─$ service mysqld start 
+<br>
+Datos para pruebas
+<br>
+Vendedores.
+<br>
+INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'Vendedor1', 'vendedor@onfraga.com', '12345', NULL, NULL, NULL),
+(2, 'Vendedor 2', 'Vendedor2@hotmail.com', '12345', NULL, '2023-03-18 00:10:25', '2023-03-18 00:10:25');
+<br><br>
+Productos.
+<br>
+INSERT INTO `products` (`id`, `name`, `description`, `price`, `created_at`, `updated_at`, `f100_id_f200_id_fk1`) VALUES
+(1, 'La Coste Red', 'Perfumeria fina', 2000.00, '2023-03-17 12:45:07', '2023-03-17 12:45:07', 1),
+(3, 'Lolita Lempicka', 'Lolita Lempicka', 3000.00, '2023-03-18 00:09:36', '2023-03-18 00:09:36', 1),
+(4, 'Paris Hilton', 'Lolita Lempicka', 3000.00, '2023-03-18 00:09:36', '2023-03-18 00:09:36', 1),
+(5, 'Invictus', 'Invictus', 5000.00, '2023-03-18 00:11:09', '2023-03-18 00:11:09', 2);
+<br><br>
+Notificaciones.
+<br><br>
+INSERT INTO `notify_products` (`id`, `nota`, `f1_id_f2_id_fk1`, `created_at`, `updated_at`) VALUES
+(1, 'Se envia correcto', 1, '2023-03-24 16:14:58', '2023-03-18 02:04:28'),
+(2, 'Producto sin stock', 1, '2023-03-24 16:14:58', '2023-03-17 16:14:58'),
+(11, 'Producto Terminado', 1, '2023-03-18 05:12:03', '2023-03-18 06:24:18'),
+(12, 'En traslado', 1, '2023-03-18 05:13:03', '2023-03-18 06:24:50'),
+(15, 'No recibido', 4, '2023-03-18 05:36:43', '2023-03-18 05:36:43'),
+(17, 'paris final', 4, '2023-03-18 05:38:48', '2023-03-18 05:38:48');
+<br>
+<br>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+Comandos Laravel
+Modelos.<br>
+┌──(cdrb㉿onfraga)-[~]
+└─$ php artisan make:model NotifyProduct -m     
+<br>
+Controladores<br>
+┌──(cdrb㉿onfraga)-[~]
+└─$ php artisan make:controller RestApiDemoController  
+<br>
+Iniciar migracio;n<br>
+┌──(cdrb㉿onfraga)-[~]
+└─$ php artisan migrate 
+<br>Lista de rutas<br>
+┌──(cdrb㉿onfraga)-[~]
+└─$ php artisan route:list 
+<br>
+instalaci;on angular
+┌──(cdrb㉿onfraga)-[~]
+└─$ npm install -g @angular/cli   
+<br>
+┌──(cdrb㉿onfraga)-[~]
+└─$ ng serve --open    
+<br>
+<br>
+<b>Prueba de API via CURL</b>
+┌──(cdrb㉿onfraga)-[~]
+└─$ curl -X POST -G 'http://127.0.0.1:8000/api/apiNotifyNew/' -d 'nota=Producto en camino'  
+<br>
+┌──(cdrb㉿onfraga)-[~]
+└─$ curl -X PUT -G 'http://127.0.0.1:8000/api/apiNotifyUpdate/1' -d 'nota=Producto entregado' 
+<br><br>
+<b>Instalacio;n PHP 7.0 Debian</b>
+<br>
+┌──(cdrb㉿onfraga)-[~]
+└─$ sudo apt-get install php7.0-mysql 
+<br>
+<br>
+Composer 2.2<br>
+┌──(cdrb㉿onfraga)-[~]
+└─$ curl -sS https://getcomposer.org/installer | php -- --2.2  
+<br>
+Repositorio PHP7
+┌──(cdrb㉿onfraga)-[~]
+└─$ sudo add-apt-repository ppa:ondrej/php 
 
-## About Laravel
+<img src="http://www.onraga.com/valley.png">
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of any modern web application framework, making it a breeze to get started learning the framework.
-
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell):
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Pulse Storm](http://www.pulsestorm.net/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
