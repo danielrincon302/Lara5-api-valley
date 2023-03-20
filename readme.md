@@ -65,7 +65,10 @@ $ curl -sS https://getcomposer.org/installer | php -- --2.2
 <br>
 Repositorio PHP7
 $ sudo add-apt-repository ppa:ondrej/php 
-
+$ sudo apt-get install php7.0-mysql 
+<br>
+<br>
+Interfaz, consumo de API via Angular 14
 <img src="http://www.onfraga.com/valley.png">
 
 
