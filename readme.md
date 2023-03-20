@@ -1,10 +1,8 @@
 Iniciar Servidores
 <br>
-┌──(㉿)-[~]
-└─$ service apache2 start 
+$ service apache2 start 
 <br>
-┌──(㉿)-[~]
-└─$ service mysqld start 
+$ service mysqld start 
 <br>
 Datos para pruebas
 <br>
@@ -79,6 +77,6 @@ Repositorio PHP7
 ┌──(cdrb㉿onfraga)-[~]
 └─$ sudo add-apt-repository ppa:ondrej/php 
 
-<img src="http://www.onraga.com/valley.png">
+<img src="http://www.onfraga.com/valley.png">
 
 
