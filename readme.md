@@ -34,48 +34,37 @@ INSERT INTO `notify_products` (`id`, `nota`, `f1_id_f2_id_fk1`, `created_at`, `u
 
 Comandos Laravel
 Modelos.<br>
-┌──(cdrb㉿onfraga)-[~]
-└─$ php artisan make:model NotifyProduct -m     
+$ php artisan make:model NotifyProduct -m     
 <br>
 Controladores<br>
-┌──(cdrb㉿onfraga)-[~]
-└─$ php artisan make:controller RestApiDemoController  
+$ php artisan make:controller RestApiDemoController  
 <br>
 Iniciar migracio;n<br>
-┌──(cdrb㉿onfraga)-[~]
-└─$ php artisan migrate 
+$ php artisan migrate 
 <br>Lista de rutas<br>
-┌──(cdrb㉿onfraga)-[~]
-└─$ php artisan route:list 
+$ php artisan route:list 
 <br>
 instalaci;on angular
-┌──(cdrb㉿onfraga)-[~]
-└─$ npm install -g @angular/cli   
+$ npm install -g @angular/cli   
 <br>
-┌──(cdrb㉿onfraga)-[~]
-└─$ ng serve --open    
+$ ng serve --open    
 <br>
 <br>
 <b>Prueba de API via CURL</b>
-┌──(cdrb㉿onfraga)-[~]
-└─$ curl -X POST -G 'http://127.0.0.1:8000/api/apiNotifyNew/' -d 'nota=Producto en camino'  
+$ curl -X POST -G 'http://127.0.0.1:8000/api/apiNotifyNew/' -d 'nota=Producto en camino'  
 <br>
-┌──(cdrb㉿onfraga)-[~]
-└─$ curl -X PUT -G 'http://127.0.0.1:8000/api/apiNotifyUpdate/1' -d 'nota=Producto entregado' 
+$ curl -X PUT -G 'http://127.0.0.1:8000/api/apiNotifyUpdate/1' -d 'nota=Producto entregado' 
 <br><br>
 <b>Instalacio;n PHP 7.0 Debian</b>
 <br>
-┌──(cdrb㉿onfraga)-[~]
-└─$ sudo apt-get install php7.0-mysql 
+$ sudo apt-get install php7.0-mysql 
 <br>
 <br>
 Composer 2.2<br>
-┌──(cdrb㉿onfraga)-[~]
-└─$ curl -sS https://getcomposer.org/installer | php -- --2.2  
+$ curl -sS https://getcomposer.org/installer | php -- --2.2  
 <br>
 Repositorio PHP7
-┌──(cdrb㉿onfraga)-[~]
-└─$ sudo add-apt-repository ppa:ondrej/php 
+$ sudo add-apt-repository ppa:ondrej/php 
 
 <img src="http://www.onfraga.com/valley.png">
 
